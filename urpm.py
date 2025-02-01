@@ -244,8 +244,6 @@ class Pack:
             version = next(versions)
             flag = next(flags)
             if not name.startswith('rpmlib('):
-                if name == "dcmtk":
-                    print(f"{name} {version} {flag}")
                 if version != "":
                     constraint = ""
                     if (flag & rpm.RPMSENSE_LESS):
